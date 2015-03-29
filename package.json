@@ -1,0 +1,19 @@
+{
+  "name": "joonaspessi.com",
+  "version": "0.0.1",
+  "description": "joonaspessi.com homepage",
+  "main": "index.js",
+  "scripts": {
+    "build-less": "lessc app/styles/main.less app/bundle.css"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^4.7.16",
+    "less": "^2.4.0",
+    "react": "^0.13.1"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.4"
+  }
+}
