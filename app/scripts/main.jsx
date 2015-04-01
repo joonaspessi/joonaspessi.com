@@ -29,7 +29,7 @@ class App extends React.Component {
         return (
             <div className="app">
                 <header className="app__header">
-                  <ul>
+                  <ul className="app__header__navigation">
                     <li><Link to="app">Home</Link></li>
                     <li><Link to="workouts">Workouts</Link></li>
                     <li><Link to="contact">Contact</Link></li>

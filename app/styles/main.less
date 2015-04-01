@@ -1,4 +1,5 @@
-@import (inline) 'libs/reset.css';
+@import (inline) "libs/reset.css";
+@import "_header.less";
 
 html,
 body {
@@ -14,9 +15,16 @@ body {
 .app {
     display: flex;
     flex: 1;
+    flex-direction: column;
 }
 
-.app-header {
-    background-color: red;
+.app__header {
+    display: flex;
+    flex: none;
+    height: 50px;
+}
 
+.app__content {
+    display: flex;
+    flex: 1;
 }
