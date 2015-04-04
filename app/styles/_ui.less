@@ -9,6 +9,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .app {
     display: flex;
     flex: 1;
@@ -18,17 +22,27 @@ body {
     display: flex;
     flex: 1;
     flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .app__main {
     flex: 1;
     display: flex;
+    margin: 5px;
+
+}
+
+.app__main div {
+    flex: 1;
 }
 
 .app__sidebar {
     flex: none;
     width: 200px;
     border-right: 1px solid @grey;
+    transition: margin ease-out 500ms;
+    padding-left: 15px;
 }
 
 .app__header {
@@ -36,5 +50,31 @@ body {
     height: 47px;
     display: flex;
     border-bottom: 1px solid @grey;
-    border-top: 1px solid @black;
 }
+
+.sidebar__navigation {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__item {
+    flex: 1;
+    display: flex;
+    height: 42px;
+    color: @black;
+
+    a {
+        color: black;
+        text-align: center;
+        line-height: 42px;
+        &:hover {
+            color: #0778C1;
+        }
+    }
+}
+
+.sidebar__item__icon {
+    margin-right: 5px;
+}
+
