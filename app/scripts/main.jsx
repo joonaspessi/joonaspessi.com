@@ -17,13 +17,22 @@ class Home extends React.Component {
 
 class Contact extends React.Component {
     render() {
-        return (<div>Twitter @joonaspessi</div>);
+        return (<div className="contact">Twitter @joonaspessi</div>);
     }
 }
 
 class BikeSetup extends React.Component {
     render() {
-        return (<div>My personal bike setup</div>);
+        return (
+            <div className="bike-setup">
+                <div className="bike-setup__info">
+                    My personal bike setup
+                </div>
+                <div className="bike-setup__image">
+                    <img src="images/joonaspessi.jpg" alt="joonas pessi"/>
+                </div>
+            </div>
+        );
     }
 }
 
@@ -34,6 +43,7 @@ class Header extends React.Component {
             <div className="app__header">
                 <div className="header__icon fa fa-bars" onClick={onHamburgerClick}></div>
                 <div className="header__name">JOONASPESSI</div>
+                <a href="https://github.com/joonaspessi/joonaspessi.com" className="header__github fa fa-github"/>
             </div>
         );
     }

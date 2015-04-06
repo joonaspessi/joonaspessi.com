@@ -6,7 +6,7 @@ class Workout extends React.Component {
         return (
             <div className="workout">
                 <div className="workout__header">
-                    <div className="workout__name">Nokian kierros</div>
+                    <div className="workout__name">Tour De France</div>
                     <div className="workout__information">
                         <div className="workout__distance">101km</div>
                         <div className="workout__moving-time">5:04:18</div>
