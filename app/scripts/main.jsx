@@ -2,6 +2,7 @@ import React from "react";
 import Router from "react-router";
 import Sidebar from "./sidebar.jsx";
 import Workouts from "./workouts.jsx";
+import emitter from "./emitter.js"
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -28,12 +29,17 @@ class BikeSetup extends React.Component {
 
 class Header extends React.Component {
     render() {
+        let onHamburgerClick = this.onHamburgerClick.bind(this);
         return (
             <div className="app__header">
-                <div className="header__icon fa fa-bars"></div>
+                <div className="header__icon fa fa-bars" onClick={onHamburgerClick}></div>
                 <div className="header__name">JOONASPESSI</div>
             </div>
         );
+    }
+
+    onHamburgerClick() {
+        emitter.emit("sidebar::collapse");
     }
 }
 

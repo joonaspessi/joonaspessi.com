@@ -40,6 +40,31 @@ class Workouts extends React.Component {
                 <Workout/>
                 <Workout/>
                 <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
+                <Workout/>
             </div>
         )
     };

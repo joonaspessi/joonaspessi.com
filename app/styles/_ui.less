@@ -4,7 +4,7 @@ body {
     height: 100%;
     display: flex;
     flex: 1;
-
+    overflow: hidden;
     font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
@@ -28,12 +28,14 @@ a {
     display: flex;
     margin: 15px;
     margin-top: 0;
-
+    min-width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 .app__main div {
     flex: 1;
-    overflow-y: scroll;
 }
 
 .app__sidebar {
@@ -42,6 +44,10 @@ a {
     border-right: 1px solid @grey;
     transition: margin ease-out 500ms;
     padding-top: 15px;
+}
+
+.app__sidebar--collapse {
+    margin-left: -200px;
 }
 
 .app__header {
@@ -97,6 +103,7 @@ a {
     border-bottom: 1px solid @grey;
 
     cursor: pointer;
+    -webkit-user-select: none;
 }
 
 .workout__header {
