@@ -80,8 +80,7 @@ body {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin: 0;
-  padding: 0;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 a {
   text-decoration: none;
@@ -110,8 +109,6 @@ a {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 .app__main {
   -webkit-box-flex: 1;
@@ -122,13 +119,15 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 5px;
+  margin: 15px;
+  margin-top: 0;
 }
 .app__main div {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow-y: scroll;
 }
 .app__sidebar {
   -webkit-box-flex: 0;
@@ -139,7 +138,7 @@ a {
   border-right: 1px solid #f3f3f3;
   -webkit-transition: margin ease-out 500ms;
           transition: margin ease-out 500ms;
-  padding-left: 15px;
+  padding-top: 15px;
 }
 .app__header {
   -webkit-box-flex: 0;
@@ -168,6 +167,9 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.header__icon {
+  margin-left: 15px;
+}
 .sidebar__item {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -179,6 +181,7 @@ a {
   display: flex;
   height: 42px;
   color: #000000;
+  padding-left: 15px;
 }
 .sidebar__item a {
   color: black;
@@ -188,6 +191,60 @@ a {
 .sidebar__item a:hover {
   color: #0778C1;
 }
+.sidebar__item:hover {
+  background-color: #f3f3f3;
+}
 .sidebar__item__icon {
   margin-right: 5px;
+}
+.workout {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-bottom: 1px solid #f3f3f3;
+  cursor: pointer;
+}
+.workout__header {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.workout__information {
+  color: #a5a5a5;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+}
+.workout__suffer {
+  text-align: center;
 }

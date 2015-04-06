@@ -1,5 +1,7 @@
 import React from "react";
 import Router from "react-router";
+import Sidebar from "./sidebar.jsx";
+import Workouts from "./workouts.jsx";
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -12,15 +14,9 @@ class Home extends React.Component {
     }
 }
 
-class Workouts extends React.Component {
-    render() {
-        return (<div>Workouts Data mining and graphs</div>);
-    }
-}
-
 class Contact extends React.Component {
     render() {
-        return (<div>Contact</div>);
+        return (<div>Twitter @joonaspessi</div>);
     }
 }
 
@@ -45,22 +41,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <div className="app__sidebar">
-                    <ul className="sidebar__navigation">
-                        <li className="sidebar__item ">
-                            <Link to="app"><div className="sidebar__item__icon fa fa-home"/>Workouts</Link>
-                        </li>
-                        <li className="sidebar__item">
-                            <Link to="workouts"><div className="sidebar__item__icon fa fa-dashboard"/>Training Data</Link>
-                        </li>
-                        <li className="sidebar__item">
-                            <Link to="bikesetup"><div className="sidebar__item__icon fa fa-bicycle"/>Bike Setup</Link>
-                        </li>
-                        <li className="sidebar__item">
-                            <Link to="contact"><div className="sidebar__item__icon fa fa-diamond"/>Contact</Link>
-                        </li>
-                    </ul>
-                </div>
+                <Sidebar collapse={true}/>
                 <div className="app__content">
                     <Header/>
                     <div className="app__main">
@@ -77,7 +58,7 @@ var routes = (
     <Route name="workouts" handler={Workouts}/>
     <Route name="bikesetup" handler={BikeSetup}/>
     <Route name="contact" handler={Contact}/>
-    <DefaultRoute handler={Home}/>
+    <DefaultRoute handler={Workouts}/>
   </Route>
 );
 
