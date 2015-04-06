@@ -1,4 +1,5 @@
 import React from "react";
+import _ from "lodash";
 
 class Workout extends React.Component {
     render() {
@@ -20,51 +21,10 @@ class Workout extends React.Component {
 
 class Workouts extends React.Component {
     render() {
+        let workoutList = _.map(_.range(100), () => <Workout/>);
         return (
             <div className="workouts">
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
-                <Workout/>
+                {workoutList}
             </div>
         )
     };
