@@ -1,57 +1,18 @@
 import React from "react";
 import Router from "react-router";
+
+import BikeSetup from "./bikesetup.jsx";
+import Contact from "./contact.jsx";
+import Header from "./header.jsx";
 import Sidebar from "./sidebar.jsx";
 import Workouts from "./workouts.jsx";
+
 import emitter from "./emitter.js"
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
 var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
-
-class Home extends React.Component {
-    render() {
-        return (<div>Workouts</div>);
-    }
-}
-
-class Contact extends React.Component {
-    render() {
-        return (<div className="contact">Twitter @joonaspessi</div>);
-    }
-}
-
-class BikeSetup extends React.Component {
-    render() {
-        return (
-            <div className="bike-setup">
-                <div className="bike-setup__info">
-                    My personal bike setup
-                </div>
-                <div className="bike-setup__image">
-                    <img src="images/joonaspessi.jpg" alt="joonas pessi"/>
-                </div>
-            </div>
-        );
-    }
-}
-
-class Header extends React.Component {
-    render() {
-        let onHamburgerClick = this.onHamburgerClick.bind(this);
-        return (
-            <div className="app__header">
-                <div className="header__icon fa fa-bars" onClick={onHamburgerClick}></div>
-                <div className="header__name">JOONASPESSI</div>
-                <a href="https://github.com/joonaspessi/joonaspessi.com" className="header__github fa fa-github"/>
-            </div>
-        );
-    }
-
-    onHamburgerClick() {
-        emitter.emit("sidebar::collapse");
-    }
-}
 
 class App extends React.Component {
     render() {
