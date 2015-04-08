@@ -19,10 +19,10 @@ class Sidebar extends React.Component {
 
     render() {
         let showClassName = this.state.collapse ? "app__sidebar--collapse" : "";
-
+        let onNavClick = this.onNavClick.bind(this);
         return (
             <div className={"app__sidebar " +showClassName}>
-                    <ul className="sidebar__navigation">
+                    <ul className="sidebar__navigation" onClick={onNavClick}>
                         <li className="sidebar__item ">
                             <Link to="app"><div className="sidebar__item__icon fa fa-home"/>Workouts</Link>
                         </li>
@@ -38,6 +38,10 @@ class Sidebar extends React.Component {
                     </ul>
             </div>
         );
+    }
+
+    onNavClick() {
+        emitter.emit("sidebar::collapse");
     }
 }
 
