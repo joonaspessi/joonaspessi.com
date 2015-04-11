@@ -7,7 +7,8 @@ import Header from "./header.jsx";
 import Sidebar from "./sidebar.jsx";
 import Workouts from "./workouts.jsx";
 
-import emitter from "./emitter.js"
+import emitter from "./emitter.js";
+import Gestures from "./gestures.js";
 
 var DefaultRoute = Router.DefaultRoute;
 var Link = Router.Link;
@@ -42,3 +43,6 @@ var routes = (
 Router.run(routes, function (Handler) {
   React.render(<Handler/>, document.body);
 });
+
+// Init gestures
+let gestures = new Gestures();

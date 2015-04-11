@@ -16,7 +16,7 @@ class Header extends React.Component {
     }
 
     onHamburgerClick() {
-        emitter.emit("sidebar::collapse");
+        emitter.emit("sidebar::toggle");
     }
 }
 

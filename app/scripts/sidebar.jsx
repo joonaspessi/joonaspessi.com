@@ -12,8 +12,16 @@ class Sidebar extends React.Component {
     }
 
     componentDidMount() {
-        emitter.on("sidebar::collapse", function() {
+        emitter.on("sidebar::toggle", function() {
             this.setState({collapse: !this.state.collapse});
+        }.bind(this));
+
+        emitter.on("sidebar::open", function() {
+            this.setState({collapse: false});
+        }.bind(this));
+
+        emitter.on("sidebar::close", function() {
+            this.setState({collapse: true});
         }.bind(this));
     }
 
@@ -41,7 +49,7 @@ class Sidebar extends React.Component {
     }
 
     onNavClick() {
-        emitter.emit("sidebar::collapse");
+        emitter.emit("sidebar::close");
     }
 }
 

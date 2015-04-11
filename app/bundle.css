@@ -123,8 +123,8 @@ a {
           flex: none;
   width: 200px;
   border-right: 1px solid #f3f3f3;
-  -webkit-transition: margin ease-out 500ms;
-          transition: margin ease-out 500ms;
+  -webkit-transition: margin ease-out 300ms;
+          transition: margin ease-out 300ms;
   padding-top: 15px;
 }
 .app__sidebar--collapse {
@@ -177,7 +177,10 @@ a {
 }
 .sidebar__item a {
   color: black;
-  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   line-height: 42px;
 }
 .sidebar__item a:hover {
