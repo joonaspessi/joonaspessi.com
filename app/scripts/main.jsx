@@ -9,11 +9,15 @@ import Workouts from "./workouts.jsx";
 
 import emitter from "./emitter.js";
 import Gestures from "./gestures.js";
+import Model from "./model.js"
 
-var DefaultRoute = Router.DefaultRoute;
-var Link = Router.Link;
-var Route = Router.Route;
-var RouteHandler = Router.RouteHandler;
+let DefaultRoute = Router.DefaultRoute;
+let Link = Router.Link;
+let Route = Router.Route;
+let RouteHandler = Router.RouteHandler;
+
+let model = new Model();
+model.load().then(res => console.log(res));
 
 class App extends React.Component {
     render() {
@@ -31,7 +35,7 @@ class App extends React.Component {
     }
 }
 
-var routes = (
+let routes = (
   <Route name="app" path="/" handler={App}>
     <Route name="workouts" handler={Workouts}/>
     <Route name="bikesetup" handler={BikeSetup}/>
