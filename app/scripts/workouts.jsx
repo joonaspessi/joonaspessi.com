@@ -1,7 +1,9 @@
 import React from "react";
 import _ from "lodash";
+import model from "./model.js"
 
 class Workout extends React.Component {
+
     render() {
         return (
             <div className="workout">
@@ -20,6 +22,16 @@ class Workout extends React.Component {
 }
 
 class Workouts extends React.Component {
+    constructor() {
+        this.state = {
+            workouts: []
+        };
+    }
+
+    componentDidMount() {
+        model.loadAsync().then(workouts => this.setState({workouts}));
+    }
+
     render() {
         let workoutList = _.map(_.range(100), () => <Workout/>);
         return (

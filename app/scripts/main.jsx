@@ -9,15 +9,14 @@ import Workouts from "./workouts.jsx";
 
 import emitter from "./emitter.js";
 import Gestures from "./gestures.js";
-import Model from "./model.js"
+import model from "./model.js"
 
 let DefaultRoute = Router.DefaultRoute;
 let Link = Router.Link;
 let Route = Router.Route;
 let RouteHandler = Router.RouteHandler;
 
-let model = new Model();
-model.load().then(res => console.log(res));
+model.loadAsync().then(res => console.log(res));
 
 class App extends React.Component {
     render() {
