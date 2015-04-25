@@ -275,6 +275,9 @@ a {
   width: 80%;
   height: auto;
 }
+.contact {
+  margin-top: 15px;
+}
 .header__icon {
   -webkit-align-self: center;
       -ms-flex-item-align: center;

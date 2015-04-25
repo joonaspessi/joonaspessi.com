@@ -16,7 +16,8 @@ let Link = Router.Link;
 let Route = Router.Route;
 let RouteHandler = Router.RouteHandler;
 
-model.loadAsync().then(res => console.log(res));
+// Start loading workout models immediately
+model.loadAsync();
 
 class App extends React.Component {
     render() {
