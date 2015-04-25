@@ -9,7 +9,8 @@
     "autoprefixer": "autoprefixer app/bundle.css",
     "watch-less": "watch 'npm run build-less' app/styles",
     "watch-js": "watchify app/scripts/main.jsx -t babelify -d -o app/bundle.js -v",
-    "watch": "npm run watch-less & npm run watch-js"
+    "watch": "npm run watch-less & npm run watch-js",
+    "postinstall": "npm run build-js && npm run build-less"
   },
   "author": "",
   "license": "MIT",
