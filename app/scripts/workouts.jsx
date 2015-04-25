@@ -7,7 +7,7 @@ function secondsToTimeFormat(timeInS) {
     var minutes =  Math.floor(timeInS/60) - hours * 60;
     var seconds = timeInS - minutes * 60;
 
-    return `${hours}h ${minutes}min`;
+    return `${hours}h ${minutes}m`;
 }
 
 class Workout extends React.Component {

@@ -12,15 +12,15 @@ class Sidebar extends React.Component {
     }
 
     componentDidMount() {
-        emitter.on("sidebar::toggle", function() {
+        emitter.on("header::hamburgerClick", function() {
             this.setState({collapse: !this.state.collapse});
         }.bind(this));
 
-        emitter.on("sidebar::open", function() {
+        emitter.on("gesture::swipeRight", function() {
             this.setState({collapse: false});
         }.bind(this));
 
-        emitter.on("sidebar::close", function() {
+        emitter.on("gesture::swipeLeft", function() {
             this.setState({collapse: true});
         }.bind(this));
     }

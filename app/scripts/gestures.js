@@ -5,8 +5,8 @@ class Gestures {
     constructor() {
         var hammertime = new Hammer(document.body);
 
-        hammertime.on("swiperight", event => emitter.emit("sidebar::open"));
-        hammertime.on("swipeleft", event => emitter.emit("sidebar::close"));
+        hammertime.on("swiperight", event => emitter.emit("gesture::swipeRight"));
+        hammertime.on("swipeleft", event => emitter.emit("gesture::swipeLeft"));
     }
 }
 
