@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/joonaspessi/joonaspessi.com"
   },
-  "main": "index.js",
+  "main": "server/main.js",
   "scripts": {
     "build-less": "lessc app/styles/main.less app/bundle.css && npm run autoprefixer",
     "build-js": "browserify app/scripts/main.jsx -t babelify -o app/bundle.js",
@@ -16,7 +16,7 @@
     "watch-js": "watchify app/scripts/main.jsx -t babelify -d -o app/bundle.js -v",
     "watch": "npm run watch-less & npm run watch-js",
     "postinstall": "npm run build-js && npm run build-less",
-    "run-server": "npm run build-server && node server/bundle.js"
+    "server": "npm run build-server && node server/bundle.js"
   },
   "author": "",
   "license": "MIT",
