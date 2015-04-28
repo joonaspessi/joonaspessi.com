@@ -2,19 +2,21 @@
   "name": "joonaspessi.com",
   "version": "0.0.1",
   "description": "joonaspessi.com homepage",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/joonaspessi/joonaspessi.com"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joonaspessi/joonaspessi.com"
   },
   "main": "index.js",
   "scripts": {
     "build-less": "lessc app/styles/main.less app/bundle.css && npm run autoprefixer",
     "build-js": "browserify app/scripts/main.jsx -t babelify -o app/bundle.js",
+    "build-server": "babel server/main.js -o server/bundle.js",
     "autoprefixer": "autoprefixer app/bundle.css",
     "watch-less": "watch 'npm run build-less' app/styles",
     "watch-js": "watchify app/scripts/main.jsx -t babelify -d -o app/bundle.js -v",
     "watch": "npm run watch-less & npm run watch-js",
-    "postinstall": "npm run build-js && npm run build-less"
+    "postinstall": "npm run build-js && npm run build-less",
+    "run-server": "npm run build-server && node server/bundle.js"
   },
   "author": "",
   "license": "MIT",
@@ -26,6 +28,7 @@
     "lodash": "^3.6.0",
     "react": "^0.13.1",
     "react-router": "^0.13.2",
+    "restify": "^3.0.2",
     "superagent": "^1.1.0"
   },
   "devDependencies": {
