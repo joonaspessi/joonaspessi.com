@@ -1,13 +1,19 @@
 "use strict";
 
-import restify from "restify";
+import express from "express";
+import api from "./api.js";
+import dbPopulator from "./populateDB.js";
 
-let server = restify.createServer();
-server.use(restify.bodyParser());
+dbPopulator()
+    .then(function() {
+        let app = express();
 
-server.get(/\/?.*/, restify.serveStatic({
-    directory: "./app",
-    default: "index.html"
-}));
+        app.use("/api/v1", api);
+        app.use("/", express.static("app"));
 
-server.listen(3000, () => console.log(server.name, server.url));
+        let server = app.listen(3000, function() {
+            let host = server.address().address;
+            let port = server.address().port;
+            console.log('Example app listening at http://%s:%s', host, port);
+        });
+})
