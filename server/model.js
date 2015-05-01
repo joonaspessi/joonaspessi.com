@@ -11,7 +11,7 @@ let Workout = sequelize.define("Workout", {
     name: { type: Sequelize.TEXT },
     distance: { type: Sequelize.INTEGER },
     elapsed_time: { type: Sequelize.INTEGER },
-    avg_speed: { type: Sequelize.INTEGER},
+    average_speed: { type: Sequelize.INTEGER},
     strava_id: { type: Sequelize.INTEGER}
 });
 

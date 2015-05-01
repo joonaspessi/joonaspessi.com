@@ -10,7 +10,7 @@ class Model {
         if(this.workouts === null) {
             this.workouts = new Promise(function(resolve, reject) {
                 request
-                    .get("/mock-api/workouts.json")
+                    .get("/api/v1/workout")
                     .end(function(err, res) {
                         if (err) {
                             reject(reject);

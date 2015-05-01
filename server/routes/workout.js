@@ -1,7 +1,7 @@
 "use strict";
 
 import express from "express";
-import model from "./model.js";
+import model from "../model.js";
 
 function jsonOr404(req, res, next) {
     return function(data) {
@@ -16,7 +16,7 @@ function jsonOr404(req, res, next) {
 
 let router = express();
 
-router.get("/workout", function(req, res) {
+router.get("/", function(req, res) {
     return model.findAll().then(data => res.json(data));
 });
 

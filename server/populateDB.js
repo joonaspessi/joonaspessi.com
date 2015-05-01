@@ -1,27 +1,23 @@
 "use strict";
 
 import Promise from "bluebird";
+import _ from "lodash";
 import Workout from "./model";
-import fs from "fs";
 import path from "path";
 
-// Promise.promisify(fs);
+var readFile = Promise.promisify(require("fs").readFile);
 
-
-fs.readFile(path.resolve("app", "mock-api", "workouts.json"), function(err, data) {
-
-})
 
 export default function populateDataBase() {
     return Promise.all([
         Workout.sync({force: true})
     ])
-    //.then(fs.readFile(path.resolve("..", "app", "mock-api", "workouts.json"))
-    //.then(JSON.parse)
-    .then(() => Workout.create({
-        name: "hello workout",
-        distance: 5,
-        elapsed_time: 5,
-        avg_speed: 1
+    .then(() => readFile(path.resolve("app", "mock-api", "workouts.json"), "utf8"))
+    .then(file => JSON.parse(file))
+    .map(workout => Workout.create({
+        name: workout.name,
+        distance: workout.distance,
+        elapsed_time: workout.elapsed_time,
+        average_speed: workout.average_speed
     }));
 }
