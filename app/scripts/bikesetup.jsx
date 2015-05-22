@@ -5,10 +5,7 @@ class BikeSetup extends React.Component {
         return (
             <div className="bike-setup">
                 <div className="bike-setup__info">
-                    My personal bike setup
-                </div>
-                <div className="bike-setup__image">
-                    <img src="images/joonaspessi.jpg" alt="joonas pessi"/>
+                    My personal bike setup. Coming soon...
                 </div>
             </div>
         );
